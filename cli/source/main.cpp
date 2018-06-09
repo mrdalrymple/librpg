@@ -16,7 +16,9 @@ int main(int argc, char* argv[]) {
 
     Die d10(args.die());
 
-    std::cout << "Rolled 1d" << args.die() << ": " << d10.roll() << std::endl;
+    for (int i = 0; i < 10; i++) {
+      std::cout << "Rolled 1d" << args.die() << ": " << d10.roll() << std::endl;
+    }
   } catch (const std::exception& e) {
     std::cout << "ERROR: " << e.what() << std::endl;
   }
